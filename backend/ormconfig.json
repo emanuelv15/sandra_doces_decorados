@@ -4,5 +4,11 @@
   "port": 5432,
   "username": "postgres",
   "password": "scania113",
-  "database": "sandra_doces_decorados"
+  "database": "sandra_doces_decorados",
+  "migrations": [
+    "./src/database/migrations/*.ts"
+  ],
+  "cli": {
+    "migrationsDir": "./src/database/migrations"
+  }
 }
