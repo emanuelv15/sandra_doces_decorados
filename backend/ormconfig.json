@@ -5,6 +5,9 @@
   "username": "postgres",
   "password": "scania113",
   "database": "sandra_doces_decorados",
+  "entities": [
+    "./src/models/*.ts"
+  ],
   "migrations": [
     "./src/database/migrations/*.ts"
   ],
