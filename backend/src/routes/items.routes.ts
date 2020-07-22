@@ -3,8 +3,11 @@ import { getCustomRepository } from 'typeorm';
 
 import ItemsRepository from '../repositories/ItemsRepository';
 import CreateItemService from '../services/CreateItemService';
+import ensureAuthenticated from '../middlewares/ensureAuthenticated';
 
 const itemsRouter = Router();
+
+itemsRouter.use(ensureAuthenticated);
 
 itemsRouter.get('/', async (req, res) => {
   const itemsRepository = getCustomRepository(ItemsRepository);
